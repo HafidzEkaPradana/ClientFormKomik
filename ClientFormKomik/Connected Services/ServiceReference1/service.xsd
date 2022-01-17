@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/ProjectKomik" />
+  <xs:element name="Login">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Register">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="kategori" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegisterResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRegister">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="kategori" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRegisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateRegisterResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRegister">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRegisterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteRegisterResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataRegist">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataRegistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ProjectKomik" minOccurs="0" name="DataRegistResult" nillable="true" type="q1:ArrayOfDataRegister" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="peminjaman">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDPeminjaman" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TanggalPeminjaman" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Harga" type="xs:int" />
+        <xs:element minOccurs="0" name="IDKomik" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="peminjamanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="peminjamanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editPeminjaman">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDPeminjaman" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TanggalPeminjaman" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Harga" type="xs:int" />
+        <xs:element minOccurs="0" name="IDKomik" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editPeminjamanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="editPeminjamanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deletePeminjaman">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDPeminjaman" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deletePeminjamanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="deletePeminjamanResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Peminjaman">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PeminjamanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ProjectKomik" minOccurs="0" name="PeminjamanResult" nillable="true" type="q2:ArrayOfPeminjaman" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Komik">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDKomik" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="JudulKomik" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pengarang" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tahun" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="KomikResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="KomikResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editKomik">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDKomik" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="JudulKomik" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pengarang" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Tahun" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="editKomikResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="editKomikResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hapusKomik">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IDKomik" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="hapusKomikResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hapusKomikResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
